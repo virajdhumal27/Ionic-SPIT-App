@@ -5,11 +5,27 @@
         <ion-menu-button menu="first"></ion-menu-button>
       </ion-buttons>
       <ion-title>
-        Upcoming
+        Submissions
       </ion-title>
     </ion-toolbar>
     
   </ion-header>
 
+  <ion-card *ngFor="let item of items">
+    <ion-card-header>
+      <ion-card-title>{{item.subject}}</ion-card-title>
+      <ion-card-subtitle>Due Date - {{item.due}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <h2 class="lab-title">{{item.labTitle}}</h2>
+      <p class="lab-desc">Lab No.: {{item.labNo}}</p>
+
+      <div class="status">
+        <ion-label id="status-label">Status : </ion-label>
+        <ion-label id="status-option" color="{{item.statusColor}}">{{item.statusOption}}</ion-label>
+      </div>
+    </ion-card-content>
+  </ion-card>
   
 </ion-content>
