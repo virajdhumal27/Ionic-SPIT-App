@@ -1,3 +1,34 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane contentId="menu">
+    <ion-menu contentId="menu" menuId="first">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>
+            Menu 1
+          </ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle autoHide="false" menu="first">
+
+            <ion-item routerLink="tabs/tab1" routerDirection="root" routerLinkActive="active-item">
+              <ion-label>Home</ion-label>
+            </ion-item>
+            <ion-item routerLink="tabs/tab2" routerDirection="root">
+              <ion-label>Upcoming</ion-label>
+            </ion-item>
+            <ion-item routerLink="tabs/tab3" routerDirection="root">
+              <ion-label>Profile</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="menu"></ion-router-outlet>
+    
+  </ion-split-pane>
+
+  <!-- <ion-router-outlet id="tabs"></ion-router-outlet> -->
 </ion-app>
