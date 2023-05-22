@@ -17,6 +17,8 @@ export class Tab2Page {
       labNo: 5,
       statusOption: "Submitted",
       statusColor: "success",
+      canAddSubmission: false,
+      canEditSubmission: true
     },
     {
       subject: "Process Automation",
@@ -25,6 +27,8 @@ export class Tab2Page {
       labNo: 6,
       statusOption: "Not Submitted",
       statusColor: "danger",
+      canAddSubmission: true,
+      canEditSubmission: false
     },
     {
       subject: "Java Programming",
@@ -33,6 +37,8 @@ export class Tab2Page {
       labNo: 15,
       statusOption: "Submitted",
       statusColor: "success",
+      canAddSubmission: false,
+      canEditSubmission: true
     },
   ]
 

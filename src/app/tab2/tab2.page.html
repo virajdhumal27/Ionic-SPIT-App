@@ -11,7 +11,7 @@
     
   </ion-header>
 
-  <ion-card *ngFor="let item of items">
+  <ion-card *ngFor="let item of items" style="--background: #2E2E2E;">
     <ion-card-header>
       <ion-card-title>{{item.subject}}</ion-card-title>
       <ion-card-subtitle>Due Date - {{item.due}}</ion-card-subtitle>
@@ -26,6 +26,9 @@
         <ion-label id="status-option" color="{{item.statusColor}}">{{item.statusOption}}</ion-label>
       </div>
     </ion-card-content>
+
+    <ion-button fill="clear" *ngIf="item.canEditSubmission === true">Edit Submission</ion-button>
+    <ion-button fill="clear" *ngIf="item.canAddSubmission === true">Add Submission</ion-button>
   </ion-card>
   
 </ion-content>

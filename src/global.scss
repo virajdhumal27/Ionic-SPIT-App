@@ -25,7 +25,8 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
+@import 'https://fonts.googleapis.com/css2?family=Mukta&display=swap';
 
 .active-item {
-    border-left: 8px solid var(--ion-color-primary);
+    --color: var(--ion-color-primary);
 }
